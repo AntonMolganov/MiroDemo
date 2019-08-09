@@ -1,0 +1,82 @@
+POST http://localhost:10000/miro/create
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"x":1,"y":2,"width":3,"height":4}
+###
+
+POST http://localhost:10000/miro/create
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"x":1,"y":2,"width":100,"height":100}
+###
+
+
+POST http://localhost:10000/miro/read
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"id":4}
+###
+
+
+POST http://localhost:10000/miro/readAll
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+###
+
+POST http://localhost:10000/miro/readAll
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "page": {
+    "pageNum": 4,
+    "pageSize": 2
+  }
+}
+###
+
+POST http://localhost:10000/miro/readAll
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "page": {
+    "pageNum": 0,
+    "pageSize": 200
+  },
+
+  "filter": {
+    "x": 20,
+    "y": 20,
+    "width": 1,
+    "height": 1000
+  }
+}
+###
+
+
+POST http://localhost:10000/miro/update
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"id":4, "x":111,"y":222,"width":3,"height":4}
+###
+
+
+POST http://localhost:10000/miro/delete
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"id":3, "x":111,"y":222,"width":3,"height":4}
+###
